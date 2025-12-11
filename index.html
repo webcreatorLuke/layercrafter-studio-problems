@@ -48,9 +48,25 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
 
-        h2 {
-            margin-top: 30px;
-            color: #0070f3;
+        .problem {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #eee;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .problem:hover {
+            background: #ddd;
+        }
+
+        .fix {
+            display: none;
+            padding: 15px;
+            background: #fafafa;
+            border-left: 4px solid #0070f3;
+            margin-top: 10px;
+            border-radius: 6px;
         }
 
         footer {
@@ -76,47 +92,293 @@
 
 <div class="content">
     <h1>Common 3D Printing Problems</h1>
-    <p>Here are some common issues you may experience with any 3D printer, including the LayerCrafter1.</p>
+    <p>Click a problem below to see how to fix it.</p>
 
-    <h2>1. Filament Clog</h2>
-    <p>
-        A clog happens when melted filament gets stuck in the nozzle.  
-        This can be caused by low-quality filament, dust, or printing too cold.
-    </p>
+    <!-- Problem 1 -->
+    <div class="problem" onclick="toggleFix('fix1')">
+        <strong>1. Filament Clog</strong>
+    </div>
+    <div class="fix" id="fix1">
+        <p><strong>How to fix:</strong></p>
+        <ul>
+            <li>Heat the nozzle to printing temperature.</li>
+            <li>Try manually pushing filament through.</li>
+            <li>If still clogged, perform a “cold pull.”</li>
+            <li>Clean or replace the nozzle if needed.</li>
+        </ul>
+    </div>
 
-    <h2>2. Bed Adhesion Issues</h2>
-    <p>
-        If prints don’t stick to the bed, the first layer may be too high or the bed may be dirty.  
-        Cleaning the bed or adjusting the Z-offset usually fixes this.
-    </p>
+    <!-- Problem 2 -->
+    <div class="problem" onclick="toggleFix('fix2')">
+        <strong>2. Bed Adhesion Issues</strong>
+    </div>
+    <div class="fix" id="fix2">
+        <p><strong>How to fix:</strong></p>
+        <ul>
+            <li>Clean the bed with alcohol.</li>
+            <li>Re-level the bed and adjust Z-offset.</li>
+            <li>Use glue stick or hairspray if needed.</li>
+            <li>Print the first layer slower.</li>
+        </ul>
+    </div>
 
-    <h2>3. Warping</h2>
-    <p>
-        Warping happens when the print cools too fast and curls upward.  
-        Using a heated bed or an enclosure helps prevent this.
-    </p>
+    <!-- Problem 3 -->
+    <div class="problem" onclick="toggleFix('fix3')">
+        <strong>3. Warping</strong>
+    </div>
+    <div class="fix" id="fix3">
+        <p><strong>How to fix:</strong></p>
+        <ul>
+            <li>Use a heated bed.</li>
+            <li>Increase bed temperature slightly.</li>
+            <li>Use an enclosure to keep heat in.</li>
+            <li>Add a brim or raft to the print.</li>
+        </ul>
+    </div>
 
-    <h2>4. Layer Shifting</h2>
-    <p>
-        If layers shift sideways, belts may be loose or the printer may have been bumped during printing.
-    </p>
+    <!-- Problem 4 -->
+    <div class="problem" onclick="toggleFix('fix4')">
+        <strong>4. Layer Shifting</strong>
+    </div>
+    <div class="fix" id="fix4">
+        <p><strong>How to fix:</strong></p>
+        <ul>
+            <li>Tighten belts on X and Y axes.</li>
+            <li>Make sure the printer is on a stable surface.</li>
+            <li>Reduce print speed slightly.</li>
+        </ul>
+    </div>
 
-    <h2>5. Stringing</h2>
-    <p>
-        Thin strands of filament appear between parts of the print.  
-        Increasing retraction or lowering temperature usually helps.
-    </p>
+    <!-- Problem 5 -->
+    <div class="problem" onclick="toggleFix('fix5')">
+        <strong>5. Stringing</strong>
+    </div>
+    <div class="fix" id="fix5">
+        <p><strong>How to fix:</strong></p>
+        <ul>
+            <li>Increase retraction distance.</li>
+            <li>Increase retraction speed.</li>
+            <li>Lower nozzle temperature slightly.</li>
+        </ul>
+    </div>
 
-    <h2>6. Under-Extrusion</h2>
-    <p>
-        The printer isn’t pushing out enough filament.  
-        This can be caused by a partially clogged nozzle or incorrect extrusion settings.
-    </p>
+    <!-- Problem 6 -->
+    <div class="problem" onclick="toggleFix('fix6')">
+        <strong>6. Under-Extrusion</strong>
+    </div>
+    <div class="fix" id="fix6">
+        <p><strong>How to fix:</strong></p>
+        <ul>
+            <li>Check for partial nozzle clogs.</li>
+            <li>Increase extrusion multiplier slightly.</li>
+            <li>Make sure filament spool moves freely.</li>
+        </ul>
+    </div>
+
 </div>
 
 <footer>
     © 2025 LayerCraft Studio — All Rights Reserved
 </footer>
+
+<script>
+    function toggleFix(id) {
+        const box = document.getElementById(id);
+        box.style.display = box.style.display === "block" ? "none" : "block";
+    }
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LayerCraft Studio – Common 3D Printing Problems</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav {
+            background: #222;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .problem {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #eee;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .problem:hover {
+            background: #ddd;
+        }
+
+        .fix {
+            display: none;
+            padding: 15px;
+            background: #fafafa;
+            border-left: 4px solid #0070f3;
+            margin-top: 10px;
+            border-radius: 6px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: #111;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    LayerCraft Studio
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="problems.html">Common Problems</a>
+</nav>
+
+<div class="content">
+    <h1>Common 3D Printing Problems</h1>
+    <p>Click a problem below to see how to fix it.</p>
+
+    <!-- Problem 1 -->
+    <div class="problem" onclick="toggleFix('fix1')">
+        <strong>1. Filament Clog</strong>
+    </div>
+    <div class="fix" id="fix1">
+        <p><strong>How to fix:</strong></p>
+        <ul>
+            <li>Heat the nozzle to printing temperature.</li>
+            <li>Try manually pushing filament through.</li>
+            <li>If still clogged, perform a “cold pull.”</li>
+            <li>Clean or replace the nozzle if needed.</li>
+        </ul>
+    </div>
+
+    <!-- Problem 2 -->
+    <div class="problem" onclick="toggleFix('fix2')">
+        <strong>2. Bed Adhesion Issues</strong>
+    </div>
+    <div class="fix" id="fix2">
+        <p><strong>How to fix:</strong></p>
+        <ul>
+            <li>Clean the bed with alcohol.</li>
+            <li>Re-level the bed and adjust Z-offset.</li>
+            <li>Use glue stick or hairspray if needed.</li>
+            <li>Print the first layer slower.</li>
+        </ul>
+    </div>
+
+    <!-- Problem 3 -->
+    <div class="problem" onclick="toggleFix('fix3')">
+        <strong>3. Warping</strong>
+    </div>
+    <div class="fix" id="fix3">
+        <p><strong>How to fix:</strong></p>
+        <ul>
+            <li>Use a heated bed.</li>
+            <li>Increase bed temperature slightly.</li>
+            <li>Use an enclosure to keep heat in.</li>
+            <li>Add a brim or raft to the print.</li>
+        </ul>
+    </div>
+
+    <!-- Problem 4 -->
+    <div class="problem" onclick="toggleFix('fix4')">
+        <strong>4. Layer Shifting</strong>
+    </div>
+    <div class="fix" id="fix4">
+        <p><strong>How to fix:</strong></p>
+        <ul>
+            <li>Tighten belts on X and Y axes.</li>
+            <li>Make sure the printer is on a stable surface.</li>
+            <li>Reduce print speed slightly.</li>
+        </ul>
+    </div>
+
+    <!-- Problem 5 -->
+    <div class="problem" onclick="toggleFix('fix5')">
+        <strong>5. Stringing</strong>
+    </div>
+    <div class="fix" id="fix5">
+        <p><strong>How to fix:</strong></p>
+        <ul>
+            <li>Increase retraction distance.</li>
+            <li>Increase retraction speed.</li>
+            <li>Lower nozzle temperature slightly.</li>
+        </ul>
+    </div>
+
+    <!-- Problem 6 -->
+    <div class="problem" onclick="toggleFix('fix6')">
+        <strong>6. Under-Extrusion</strong>
+    </div>
+    <div class="fix" id="fix6">
+        <p><strong>How to fix:</strong></p>
+        <ul>
+            <li>Check for partial nozzle clogs.</li>
+            <li>Increase extrusion multiplier slightly.</li>
+            <li>Make sure filament spool moves freely.</li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 LayerCraft Studio — All Rights Reserved
+</footer>
+
+<script>
+    function toggleFix(id) {
+        const box = document.getElementById(id);
+        box.style.display = box.style.display === "block" ? "none" : "block";
+    }
+</script>
 
 </body>
 </html>
