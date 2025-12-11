@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LayerCraft Studio – Common 3D Printing Problems</title>
+    <title>LayerCraft Studio – LayerCrafter1</title>
+
+    <!-- Stripe Buy Button Script -->
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
     <style>
         body {
@@ -22,50 +25,53 @@
             font-weight: bold;
         }
 
-        .content {
-            max-width: 900px;
+        nav {
+            background: #222;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #555;
+        }
+
+        .product-box {
+            max-width: 700px;
             margin: 40px auto;
             background: white;
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            text-align: center;
         }
 
-        .problem {
+        .product-box img {
+            width: 100%;
+            max-width: 350px;
             margin-bottom: 20px;
-            padding: 15px;
-            background: #eee;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        .problem:hover {
-            background: #ddd;
-        }
-
-        .fix {
-            display: none;
-            padding: 15px;
-            background: #fafafa;
-            border-left: 4px solid #0070f3;
-            margin-top: 10px;
-            border-radius: 6px;
-        }
-
-        .back-btn {
-            display: inline-block;
-            margin-top: 30px;
-            background: #0070f3;
-            color: white;
-            padding: 12px 25px;
-            font-size: 18px;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: 0.2s;
-        }
-
-        .back-btn:hover {
-            background: #0059c9;
         }
 
         footer {
@@ -81,109 +87,36 @@
 <body>
 
 <header>
-    LayerCraftStudioproblems
+    LayerCraft Studio
 </header>
 
-<div class="content">
-    <h1>Common 3D Printing Problems</h1>
-    <p>Click a problem below to see how to fix it.</p>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="https://webcreatorluke.github.io/layercrafter-studio-problems/index.html">Problems</a>
+</nav>
 
-    <!-- Problem 1 -->
-    <div class="problem" onclick="toggleFix('fix1')">
-        <strong>1. Filament Clog</strong>
-    </div>
-    <div class="fix" id="fix1">
-        <p><strong>How to fix:</strong></p>
-        <ul>
-            <li>Heat the nozzle to printing temperature.</li>
-            <li>Try manually pushing filament through.</li>
-            <li>Perform a “cold pull.”</li>
-            <li>Clean or replace the nozzle if needed.</li>
-        </ul>
-    </div>
+<section class="hero">
+    <h1>LayerCrafter1</h1>
+    <p>Great 3D prints — any file</p>
+</section>
 
-    <!-- Problem 2 -->
-    <div class="problem" onclick="toggleFix('fix2')">
-        <strong>2. Bed Adhesion Issues</strong>
-    </div>
-    <div class="fix" id="fix2">
-        <p><strong>How to fix:</strong></p>
-        <ul>
-            <li>Clean the bed with alcohol.</li>
-            <li>Re-level the bed and adjust Z-offset.</li>
-            <li>Use glue stick or hairspray if needed.</li>
-            <li>Print the first layer slower.</li>
-        </ul>
-    </div>
+<section class="product-box">
+    <img src="https://via.placeholder.com/350x350?text=LayerCrafter1" alt="LayerCrafter1 Printer">
 
-    <!-- Problem 3 -->
-    <div class="problem" onclick="toggleFix('fix3')">
-        <strong>3. Warping</strong>
-    </div>
-    <div class="fix" id="fix3">
-        <p><strong>How to fix:</strong></p>
-        <ul>
-            <li>Use a heated bed.</li>
-            <li>Increase bed temperature slightly.</li>
-            <li>Use an enclosure to keep heat in.</li>
-            <li>Add a brim or raft.</li>
-        </ul>
-    </div>
+    <h2>$200.00 – LayerCrafter1</h2>
+    <p>The ultimate 3D printer for creators, makers, and innovators.</p>
 
-    <!-- Problem 4 -->
-    <div class="problem" onclick="toggleFix('fix4')">
-        <strong>4. Layer Shifting</strong>
-    </div>
-    <div class="fix" id="fix4">
-        <p><strong>How to fix:</strong></p>
-        <ul>
-            <li>Tighten belts on X and Y axes.</li>
-            <li>Ensure printer is on a stable surface.</li>
-            <li>Reduce print speed slightly.</li>
-        </ul>
-    </div>
+    <!-- Stripe Buy Button -->
+    <stripe-buy-button
+        buy-button-id="buy_btn_1SdJOfITAHyHaTwn0DyEpEgI"
+        publishable-key="pk_live_51QyN83ITAHyHaTwn9SFArsrZ9s32pPGa0l6MDqdnKiKggltVTzfUpTcRgRk3WGP2eUfx78wFscfDQ7OY4YWJPX9g00qFLmliZ4">
+    </stripe-buy-button>
 
-    <!-- Problem 5 -->
-    <div class="problem" onclick="toggleFix('fix5')">
-        <strong>5. Stringing</strong>
-    </div>
-    <div class="fix" id="fix5">
-        <p><strong>How to fix:</strong></p>
-        <ul>
-            <li>Increase retraction distance.</li>
-            <li>Increase retraction speed.</li>
-            <li>Lower nozzle temperature slightly.</li>
-        </ul>
-    </div>
-
-    <!-- Problem 6 -->
-    <div class="problem" onclick="toggleFix('fix6')">
-        <strong>6. Under-Extrusion</strong>
-    </div>
-    <div class="fix" id="fix6">
-        <p><strong>How to fix:</strong></p>
-        <ul>
-            <li>Check for partial nozzle clogs.</li>
-            <li>Increase extrusion multiplier slightly.</li>
-            <li>Ensure filament spool moves freely.</li>
-        </ul>
-    </div>
-
-    <!-- Back to Home Button -->
-    <a class="back-btn" href="https://webcreatorluke.github.io/layercrafter-studio/">⬅ Back to Home</a>
-
-</div>
+</section>
 
 <footer>
     © 2025 LayerCraft Studio — All Rights Reserved
 </footer>
-
-<script>
-    function toggleFix(id) {
-        const box = document.getElementById(id);
-        box.style.display = box.style.display === "block" ? "none" : "block";
-    }
-</script>
 
 </body>
 </html>
